@@ -4,105 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f6f3;
-            margin: 0;
+    <link rel="stylesheet" href="style.css">
 
-        }
-        form {
-            background: #fff;
-            padding: 32px;
-            max-width: 500px;
-            margin: 0 auto;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-        .row {
-            display: flex;
-            gap: 16px;
-        }
-        .field {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            font-size: 15px;
-            margin-bottom: 6px;
-            color: #444;
-        }
-        input, textarea {
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 8px;
-            font-size: 15px;
-            background: #faf9f7;
-            resize: none;
-        }
-        textarea {
-            min-height: 60px;
-        }
-        button {
-            align-self: flex-end;
-            background: #a34e24;
-            color: #fff;
-            border: none;
-            padding: 10px 32px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #843e1c;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-        }
-        footer {
-            padding-top: 50px;
-            text-align: center;
-            font-size: 0.8em;
-        }
-        nav {
-            background-color: rgb(219, 219, 218);
-            margin: 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 0;
-        }
-        nav .nav-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 24px;
-            height: 56px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 24px;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
 </head>
 <body>
     <nav>
         <div class="nav-content">
-            <h2>Four seasons</h2>
+            <div id="sitename">Moda Seasons</div>
             <ul>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Team</li>
-                <li>Contact</li>
+                <li><a href="home.html">Home</a></li>
+                <li><a>Products</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -111,23 +24,23 @@
         <div class="row">
             <div class="field">
                 <label for="fname">First Name *</label>
-                <input type="text" id="fname" name="fname" required>
+                <input type="text" id="fname" name="fname" placeholder="John" required>
             </div>
 
             <div class="field">
                 <label for="lname">Last Name *</label>
-                <input type="text" id="lname" name="lname" required>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required>
             </div>
 
         </div>
         <div class="field">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
         </div>
 
         <div class="field">
             <label for="message">Message</label>
-            <textarea name="message" id="message" rows="3"></textarea>
+            <textarea name="message" id="message" rows="3" required></textarea>
         </div>
         <button type="submit">Send</button>
     </form>
