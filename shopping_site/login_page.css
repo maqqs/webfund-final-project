@@ -1,0 +1,368 @@
+@keyframes season-fade {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes header-glow {
+    0%, 100% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    }
+    50% {
+        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.5)
+    }
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+.season-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+#winter-snow {
+    background-image: url('http://33.media.tumblr.com/41f2189ce6eaf8c9c812cfe85f025a1d/tumblr_nckoolnw9z1tbzgzlo3_500.gif');
+    animation: season-fade 20s ease-in-out infinite;
+    animation-delay: 0s;
+    opacity: 0;
+}
+#spring-bloom {
+    background-image: url('https://i.pinimg.com/originals/21/11/2a/21112a5dc1db50c41abb9c74d3534b8c.gif');
+    animation: season-fade 20s ease-in-out infinite;
+    animation-delay: 5s;
+    opacity: 0;
+}
+#summer-ocean {
+    background-image: url('https://c.tenor.com/VPXCi6VesgwAAAAC/suki.gif');
+    animation: season-fade 20s ease-in-out infinite;
+    animation-delay: 10s;
+    opacity: 0;
+}
+#fall-leaves {
+    background-image: url('https://i.pinimg.com/originals/71/e7/48/71e748cc6fedc700240795d96c564652.gif');
+    animation: season-fade 20s ease-in-out infinite;
+    animation-delay: 15s;
+    opacity: 0;
+}
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: header-glow 4s ease-in-out infinite alternate
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 500
+}
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+.login-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+    padding: 80px 50px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    z-index: 10;
+    margin-right: 5vw;
+    margin-left: 20px
+}
+.login-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px 0 rgba(0, 0, 0, 0.3);
+}
+.login-box h2 {
+    margin-top: 0;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em
+}
+.message-box {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.form-group {
+    margin-bottom: 20px
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #4b4f56
+}
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    color: #1c1e21;
+    background-color: white;
+}
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25)
+}
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.form-group button {
+    width: 100%;
+    flex: none;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s
+}
+#login-btn {
+    background-color: #007bff;
+    background-image: url('/images/lock-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 20px 20px;
+    padding-left: 45px;
+}
+#login-btn:hover {
+    background-color: #0056b3;
+}
+#signup-btn {
+    background-color: #28a745;
+}
+#signup-btn:hover {
+    background-color: #1e7e34;
+}
+.form-group button:active {
+    transform: scale(0.99)
+}
+.form-group button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.login-box p a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em
+}
+.login-box p a:hover {
+    text-decoration: underline
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.25);
+    border-top: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    color: #1c1e21;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 0.9em;
+    z-index: 10;
+    margin-top: auto;
+    margin: 50px 20px 20px 20px;
+}
+footer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px 0 rgba(0, 0, 0, 0.3);
+}
+footer p {
+    margin: 5px 0
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s
+}
+footer a:hover {
+    color: #0056b3;
+    text-decoration: underline
+}
+.main-content {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    margin: 50px auto;
+    color: #1c1e21;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+.main-content h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+.main-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.main-content strong {
+    color: #007bff;
+}
+.logout-btn-style {
+    background-color: #dc3545;
+}
+.logout-btn-style:hover {
+    background-color: #c82333;
+}
+@media screen and (max-width:600px) {
+    .container {
+        justify-content: center;
+        padding-top: 50px;
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+    header {
+        padding: 15px 10px
+    }
+    header h1 {
+        font-size: 1.5em
+    }
+    .login-box {
+        width: 90%;
+        max-width: 100%;
+        padding: 40px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 0px;
+        margin-right: 0;
+        margin-left: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%
+    }
+    .action-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    footer {
+        padding: 20px 10px;
+        font-size: 0.8em;
+        margin: 20px 0 0 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer p {
+        margin: 10px 0
+    }
+    footer a {
+        display: block;
+        margin: 5px 0
+    }
+}
+.website-details {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto 200px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.website-details h2 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+.website-details p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+.website-details ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.website-details li {
+    margin-bottom: 8px;
+    color: #555;
+}
+@media screen and (max-width:600px) {
+    .website-details {
+        width: 95%;
+        padding: 20px;
+        margin: 30px auto 120px auto;
+    }
+}
