@@ -49,7 +49,7 @@ textarea {
 }
 
 button {
-    align-self: flex-end;
+    align-self: center;
     background: #a34e24;
     color: #fff;
     border: none;
@@ -57,6 +57,7 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
