@@ -14,7 +14,7 @@ body {
 
 #logo {
     padding-top: 50px;
-    padding-right: 100px;
+    padding-right: 80px;
 }
 
 form {
@@ -46,8 +46,7 @@ label {
     color: #444;
 }
 
-input,
-textarea {
+input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 8px;
@@ -60,7 +59,36 @@ textarea {
     min-height: 60px;
 }
 
-button {
+.password-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-row input[type="password"],
+.password-row input[type="text"] {
+    width: 100%;
+    padding-right: 60px; /* space for button */
+    box-sizing: border-box;
+}
+
+.showpw, .showcpw {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #eeeeee00;
+    border: none;
+    color: #444;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 32px;
+    z-index: 2;
+}
+
+.submitbutton {
     align-self: center;
     background: #a34e24;
     color: #fff;
@@ -72,7 +100,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+.submitbutton:hover {
     background: #843e1c;
 }
 
@@ -82,11 +110,11 @@ h1 {
 }
 
 footer {
-    position: absolute;
-    padding-top: 50px;
+    position: relative;
     text-align: center;
     font-size: 0.8em;
-    bottom: 40px;
+    padding-top: 60px;
+    bottom: 0px;
     width: 100%;
 }
 

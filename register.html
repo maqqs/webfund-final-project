@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Moda Seasons</title>
     <link rel="stylesheet" href="styles/register.css">
+    <script src="javascripts/register.js"></script>
 
 </head>
 
@@ -15,7 +16,7 @@
     
     <div id="main">
     <h1>Register an account</h1>
-    <form onsubmit="alert('form submitted successfully')">
+    <form>
         <div class="row">
             <div class="field">
                 <label for="fname">First Name *</label>
@@ -35,15 +36,22 @@
 
         <div class="field">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <div class="password-row">
+                <input type="password" id="password" name="password" required>
+                <button onclick=togglePassword() type="button" id="showpw" class="showpw">Show</button>
+            </div>
         </div>
 
 
         <div class="field">
             <label for="pasword">Confirm Password</label>
+            <div class="password-row">
             <input type="password" id="confirmpassword" name="confirmpassword" required>
+            <button onclick=toggleConfirmPassword() type="button" id="showcpw" class="showpw">Show</button>
+            </div>
         </div>
-        <button type="submit">Register</button>
+
+        <button onclick=checkPassword() class="submitbutton" type="submit">Register</button>
     </form>
     </div>
     </div>
