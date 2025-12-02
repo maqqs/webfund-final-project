@@ -153,3 +153,8 @@ nav ul {
     align-items: center;
     font-size: 1.25em;
 }
+
+#login {
+    font-size: 0.75em;
+    max-height: 20px;
+}
