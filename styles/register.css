@@ -5,6 +5,18 @@ body {
 
 }
 
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px
+}
+
+#logo {
+    padding-top: 50px;
+    padding-right: 100px;
+}
+
 form {
     background: #fff;
     padding: 32px;
