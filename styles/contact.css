@@ -69,11 +69,11 @@ h1 {
 }
 
 footer {
-    position: absolute;
-    padding-top: 50px;
+    position: relative;
     text-align: center;
     font-size: 0.8em;
-    bottom: 40px;
+    padding-top: 80px;
+    bottom: 10px;
     width: 100%;
 }
 
