@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
 }
 
 #container {
@@ -15,12 +16,12 @@ body {
     flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 50px
+    gap: 90px;
+    padding-right: 100px;
 }
 
 #logo {
-    padding-top: 50px;
-    padding-right: 80px;
+    padding: 0;
 }
 
 form {
@@ -115,7 +116,7 @@ textarea {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 
