@@ -2,7 +2,26 @@ body {
     font-family: Arial, sans-serif;
     background: #f8f6f3;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+}
+
+#container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 form {
@@ -69,12 +88,11 @@ h1 {
 }
 
 footer {
-    position: relative;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 80px;
-    bottom: 10px;
     width: 100%;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 nav {

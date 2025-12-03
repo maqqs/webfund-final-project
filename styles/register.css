@@ -2,11 +2,17 @@ body {
     font-family: Arial, sans-serif;
     background: #f8f6f3;
     margin: 0;
+}
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #container {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
     gap: 50px
@@ -46,7 +52,8 @@ label {
     color: #444;
 }
 
-input, textarea {
+input,
+textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 8px;
@@ -68,11 +75,13 @@ textarea {
 .password-row input[type="password"],
 .password-row input[type="text"] {
     width: 100%;
-    padding-right: 60px; /* space for button */
+    padding-right: 60px;
+    /* space for button */
     box-sizing: border-box;
 }
 
-.showpw, .showcpw {
+.showpw,
+.showcpw {
     position: absolute;
     right: 0;
     top: 50%;
@@ -111,12 +120,10 @@ h1 {
 
 
 footer {
-    position: relative;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 60px;
-    bottom: 10px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 nav {
