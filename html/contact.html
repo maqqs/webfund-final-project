@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Moda Seasons</title>
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        <nav> <!-- NAV BAR -->
+
+        <div class="navbar">
+            <div class="left-nav">
+
+                <div class="sidebar-button">
+                    <input type="checkbox" id="sidebar-active">
+                    <label for="sidebar-active" class="open-sidebar-button">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </label>
+
+                    <div class="links-container">
+                        <label for="sidebar-active" class="open-sidebar-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </label>
+
+
+                        <a href="home.html">Home</a>
+                        <a href="#">Products</a>
+                        <a href="#">Team</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="register.html">Account</a>
+                        <p>&copy; MODA SEASONS</p>
+
+                    </div>
+                </div>
+
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="Logo" style="height: 70px;">
+                    <div class="logoname">
+                        MODA SEASONS
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="search" id="search-input" name="search"
+                    placeholder="Search for products, keywords and more...">
+                <button type="submit" class="search-icon-button" aria-label="Search">
+                    🔍
+                </button>
+            </div>
+
+            <div class="user">
+                Guest
+            </div>
+
+    </nav>
+        <div class="main">
+            <h1>Contact Us</h1>
+            <form onsubmit="alert('form submitted successfully')">
+                <div class="row">
+                    <div class="field">
+                        <label for="fname">First Name *</label>
+                        <input type="text" id="fname" name="fname" placeholder="John" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="lname">Last Name *</label>
+                        <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                    </div>
+
+                </div>
+                <div class="field">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="3" required></textarea>
+                </div>
+                <button class="submit-button" type="submit">Send</button>
+            </form>
+        </div>
+        <footer>
+            test@email.com <br>
+            Find us at xxxx.xxxxx <br>
+            &copy; assignment group x
+        </footer>
+    </div>
+
+</body>
+
+</html>

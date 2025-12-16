@@ -1,98 +1,12 @@
-body {
+html {
     font-family: 'Montserrat', sans-serif;
-    background: #f8f6f3;
+}
+
+body {
     margin: 0;
+    padding: 0;
+    background-color: #333;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main {
-    flex: 1;
-}
-
-#container {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-form {
-    background: #fff;
-    padding: 32px;
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.row {
-    display: flex;
-    gap: 16px;
-}
-
-.field {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 15px;
-    margin-bottom: 6px;
-    color: #444;
-}
-
-input,
-textarea {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    font-size: 15px;
-    background: #faf9f7;
-    resize: none;
-}
-
-textarea {
-    min-height: 60px;
-}
-
-.submit-button {
-    align-self: flex-end;
-    background: #a34e24;
-    color: #fff;
-    border: none;
-    padding: 10px 32px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background: #843e1c;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 50px;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.8em;
-    width: 100%;
-    padding: 20px 0;
-    margin-top: auto;
 }
 
 .navbar {
@@ -195,7 +109,6 @@ nav a {
     font-size: 18px;
     text-decoration: none;
     color: black;
-    
 }
 
 nav p {
@@ -217,11 +130,34 @@ nav a:hover {
 .close-sidebar-button {
     display: block;
     padding: 20px;
-    margin: 0;
 }
 
 #sidebar-active:checked~.links-container {
     left: 0;
+}
+
+.summer,
+.autumn,
+.winter,
+.spring {
+    height: 1000px;
+    width: 100%;
+}
+
+.summer {
+    background-color: orange;
+}
+
+.autumn {
+    background-color: brown;
+}
+
+.winter {
+    background-color: lightblue;
+}
+
+.spring {
+    background-color: lightgreen;
 }
 
 @media(max-width: 600px) {
@@ -249,14 +185,4 @@ nav a:hover {
         padding-left: 5px;
 
     }
-}
-
-::placeholder {
-    color: rgba(128, 128, 128, 0.493)
-}
-
-#sitename {
-    display: flex;
-    align-items: center;
-    font-size: 1.25em;
 }
